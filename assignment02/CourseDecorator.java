@@ -30,6 +30,11 @@ public class CourseDecorator extends StudentDecorator {
 		// DO NOT make a List here, rely on the delegate to do that
 		return null; // remove this line, it is only here to make the code compile
 	}
+	public void setGrade(String courseRubricIn, String courseNumberIn, String sectionIn, String gradeIn) {
+		// if courseRubricIn.equals(courseRubric) and courseNumberIn.equals(courseNumber) and
+		// sectionIn.equals(section) then change grade to gradeIn
+		// otherwise pass the method to the delegate
+	}
 	@Override
 	public String toString() {
 		return courseRubric + " " + courseNumber + "-" + section + ": "

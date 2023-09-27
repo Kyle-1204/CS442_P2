@@ -7,12 +7,12 @@
 package assignment02;
 
 public class GraduateDecorator extends StudentDecorator {
-	public enum Program {Prog1, Prog2};
+	public static enum Program {Prog1, Prog2};
 	private Program program;
 	public Program getProgram() {
 		return program;
 	}
-	public void setProgram(Program program) {
+	public void setProgram(GraduateDecorator.Program program) {
 		this.program = program;
 	}
 	public GraduateDecorator(AbstractStudent s) {

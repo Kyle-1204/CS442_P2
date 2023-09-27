@@ -1,7 +1,7 @@
 package assignment02;
 
 public abstract class StudentDecorator extends AbstractStudent {
-	AbstractStudent delegate;
+	protected AbstractStudent delegate;
 	public StudentDecorator(AbstractStudent s) {
 		super(s.getInnerSelf());
 		delegate = s;
