@@ -7,7 +7,7 @@
 package assignment02;
 
 public class GraduateDecorator extends StudentDecorator {
-	public static enum Program {Prog1, Prog2};
+	public static enum Program {Prog1, Prog2, NONE};
 	private Program program;
 	public Program getProgram() {
 		return program;
