@@ -2,7 +2,7 @@ package assignment02;
 
 import java.util.List;
 
-public class CourseDecorator extends StudentDecorator {
+public class CourseDecorator extends StudentDecorator { 
 	String courseRubric; // such as "CS", "MATH", "CHEM", "ISE"
 	String courseNumber; // such as "350", "520", "480A", "580T"
 	String courseTitle;  // such as "Design Patterns"
@@ -23,7 +23,7 @@ public class CourseDecorator extends StudentDecorator {
 	public String getCourses() {
 		// MODIFY this code so it returns a list of all the courses from all the 
 		// CourseDecorators attached to the test object.
-		return this.toString() + "\n";
+		return super.getCourses() + this.toString() + "\n"; // I think this will allow for chaining
 	}
 	public List<String> getCourseList() {
 		// MODIFY this code to add "this.toString()" to the List

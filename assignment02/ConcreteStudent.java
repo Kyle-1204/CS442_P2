@@ -4,7 +4,7 @@
  * */
 package assignment02;
 
-public class ConcreteStudent extends AbstractStudent {
+public class ConcreteStudent extends AbstractStudent { //Concrete Class, Initial Intialization
 	private String university;
 	public ConcreteStudent(Person p) {
 		super(p);

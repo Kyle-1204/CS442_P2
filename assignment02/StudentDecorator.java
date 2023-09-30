@@ -1,6 +1,6 @@
 package assignment02;
 
-public abstract class StudentDecorator extends AbstractStudent {
+public abstract class StudentDecorator extends AbstractStudent { //This is akin to our CondimentDecorator
 	protected AbstractStudent delegate;
 	public StudentDecorator(AbstractStudent s) {
 		super(s.getInnerSelf());
@@ -15,6 +15,12 @@ public abstract class StudentDecorator extends AbstractStudent {
 	public String getUniversity() {
 		return delegate.getUniversity();
 	}
+
+	/*Additions
+	*/
+	public String getCourses(){
+		return delegate.getCourses();
+	}
 	public int hashCode() {
 		return delegate.hashCode();
 	}
@@ -24,4 +30,6 @@ public abstract class StudentDecorator extends AbstractStudent {
 	public void setUniversity(String university) {
 		delegate.setUniversity(university);
 	}
+
+
 }

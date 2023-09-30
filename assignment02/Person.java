@@ -4,7 +4,7 @@
  */
 package assignment02;
 
-public class Person {
+public class Person { //Helper Class, just a data type for Abstract Student
 	private String name;
 	private String streetAddress;
 	private String city;

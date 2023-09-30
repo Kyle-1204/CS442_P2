@@ -1,6 +1,6 @@
 package assignment02;
 
-abstract public class AbstractStudent {
+abstract public class AbstractStudent { //The First Abstract
 	private String major;
 	private Person innerSelf;
 	public AbstractStudent (Person p) {
@@ -18,9 +18,11 @@ abstract public class AbstractStudent {
 	
 	// List all the methods here that appear in all the given decorators, so that
 	// all  the decorators and the ConcreteStudent have the same interface.
-	
-	// getCourses should return ""
-	
+
+	public String getCourses(){
+		return ""; // getCourses should return ""
+	}
+
 	// getCourseList() should return new ArrayList<>()
 	
 	// The other getter methods copied from the other decorators 
