@@ -2,7 +2,7 @@ package assignment02;
 
 import java.util.List;
 
-public class CourseDecorator extends StudentDecorator { 
+public class CourseDecorator extends StudentDecorator { //Concrete Decorator
 	String courseRubric; // such as "CS", "MATH", "CHEM", "ISE"
 	String courseNumber; // such as "350", "520", "480A", "580T"
 	String courseTitle;  // such as "Design Patterns"
@@ -26,14 +26,20 @@ public class CourseDecorator extends StudentDecorator {
 		return super.getCourses() + this.toString() + "\n"; // I think this will allow for chaining
 	}
 	public List<String> getCourseList() {
-		// MODIFY this code to add "this.toString()" to the List
-		// DO NOT make a List here, rely on the delegate to do that
-		return null; // remove this line, it is only here to make the code compile
+		List<String> courseList = super.getCourseList(); // Get the course list from the delegate
+    	courseList.add(this.toString()); // Add the current course information
+    	return courseList;
 	}
 	public void setGrade(String courseRubricIn, String courseNumberIn, String sectionIn, String gradeIn) {
 		// if courseRubricIn.equals(courseRubric) and courseNumberIn.equals(courseNumber) and
 		// sectionIn.equals(section) then change grade to gradeIn
+		if(courseRubricIn.equals(courseRubric) && courseNumberIn.equals(courseNumber) && sectionIn.equals(section)){
+			grade = gradeIn;
+		}
 		// otherwise pass the method to the delegate
+		else{
+			super.setGrade(courseRubricIn, courseNumberIn, sectionIn, gradeIn);
+		}
 	}
 	@Override
 	public String toString() {
