@@ -22,15 +22,14 @@ abstract public class AbstractStudent { //The First Abstract
 	// List all the methods here that appear in all the given decorators, so that
 	// all  the decorators and the ConcreteStudent have the same interface.
 
-	public String getCourses(){ //Definetly right
+	public String getCourses(){ 
 		return ""; // getCourses should return ""
 	}
 
-	public List<String> getCourseList(){ //Probably right
+	public List<String> getCourseList(){ 
 		List<String> courseList = new ArrayList<>();
 		return courseList; // getCourseList() should return new ArrayList<>()
 	}	
-	
 
 	// The other getter methods copied from the other decorators 
 	// should print "Method not implemented"
@@ -55,7 +54,7 @@ abstract public class AbstractStudent { //The First Abstract
 	// should print "Method not implemented".
 	// There is no return since the setters are void
 	public void setGrade(String courseRubricIn, String courseNumberIn, String sectionIn, String gradeIn){
-		System.out.println("Method not implemented"); //I dont know if this is right especially
+		System.out.println("Method not implemented"); 
 	}
 
 	public void setLevel(UndergraduateDecorator.Level level) {

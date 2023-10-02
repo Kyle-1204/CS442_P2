@@ -18,8 +18,7 @@ public abstract class StudentDecorator extends AbstractStudent { //This is akin 
 		return delegate.getUniversity();
 	}
 
-	/*Additions
-	*/
+	/*Additions*/
 	public UndergraduateDecorator.Level getLevel() {
 		return delegate.getLevel();
 	}

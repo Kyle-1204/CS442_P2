@@ -4,10 +4,18 @@ import java.util.List; //Added
 
 public class TestDrive {
     public static void main(String args[]){
-        System.out.println("Testing....");
+        System.out.println("Testing....\n");
 
         Person x = new Person("Anthony", "12/27/01");
         AbstractStudent Ant = new ConcreteStudent(x);
+
+        System.out.println("Testing default methods");
+        Ant.getLevel();
+        Ant.getProgram();
+        Ant.getCountyOfResidence();
+        Ant.getVisa();
+        System.out.println();
+
         System.out.println("Printing Chaining...");
         System.out.println(Ant.getCourses()); // Should be "" or "NULL"
         System.out.println("End Chaining...");
@@ -24,6 +32,10 @@ public class TestDrive {
         System.out.println(Ant.getCourses()); // Should be above ^^
         System.out.println("End Chaining...");
         System.out.println("Printing List...");
+
+        //Testing setGrade 
+        Ant.setGrade("CS", "350", "01", "C+"); //changes grade
+        Ant.setGrade("CS", "375", "02", "A+"); //passes method to delegate
         myList = Ant.getCourseList();
         for(String word : myList){
             System.out.println(word);
